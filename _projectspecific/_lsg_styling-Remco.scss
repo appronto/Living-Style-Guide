@@ -46,36 +46,13 @@ h2{
     flex-direction: column;
     // background: red;
 }
+/////////////////////////////////////////////////////////////////
 // Start of Sticky header css
-.ap_table-sticky {
-  position: relative;
-  overflow: auto;
-  display: flex;
+/////////////////////////////////////////////////////////////////
+.ap_layout-flex-fix > div {
   flex-direction: column;
-
-  // edit this part to make the list height fit the layout
-  height: calc(70vh);
-
-  // header height
-  .ap_table-sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: $gray-lighter;
-    padding: 15px;
-    height: 65px;
-
-    td {
-      vertical-align: middle;
-      span {
-        color: $gray-light;
-      }
-    }
-  }
-  // content box scrolling enabled
-  > div {
-    // height: calc(100hv - 65px);
-  }
+  display: flex;
+  overflow: hidden;
 }
 .ap_layout-flex-fix-height {
   display: flex;
@@ -83,10 +60,45 @@ h2{
   flex-direction: column;
   overflow: hidden;
 }
+.ap_table-sticky-containter {
+  .ap_table-sticky-wrapper {
+    position: relative;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    // edit this part to make the list height fit the layout
+    // height: calc(70vh);
+    height: 100%;
+
+    // header height
+    .ap_table-sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background-color: $gray-lighter;
+      padding: 15px;
+      height: 65px;
+
+      td {
+        vertical-align: middle;
+        span {
+          color: $gray-light;
+        }
+      }
+    }
+    // content box scrolling enabled
+    > div {
+      // height: calc(100hv - 65px);
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////
 // End of sticky header css
+/////////////////////////////////////////////////////////////////
 
 .brand-logo {
-  background: url(../../sass/custom/_projectspecific/img/JR-icon.svg) !important;
+  // background: url(../../sass/custom/_projectspecific/img/JR-icon.svg) !important;
 }
 
 .ap_full-action-card {
