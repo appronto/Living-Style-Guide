@@ -50,15 +50,8 @@ h2{
 // Start of Sticky header css
 /////////////////////////////////////////////////////////////////
 
-// class to disable overflow on layout element.
-// .ap_layout-flex-fix-height {
-//   display: flex;
-//   height: 100%;
-//   flex-direction: column;
-//   overflow: hidden;
-// }
-// class to fix dyniamic height
-.ap_layout-flex-fix > div {
+// class to disable scroll on main placeholder
+.ap_layout-flex-disable-scroll > div {
   flex-direction: column;
   display: flex;
   height: 100%;
