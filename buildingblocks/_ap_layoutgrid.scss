@@ -1,0 +1,20 @@
+
+
+
+.ap_layoutgrid-vline{
+  > .row{
+    > [class*="col-md"]{
+      border-left: 1px solid $text-inactive;
+      border-right: 1px solid $text-inactive;
+      margin-right: -1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    > [class*="col-md"]:first-child{
+      border-left: none;
+    }
+    > [class*="col-md"]:last-child{
+      border-right: none;
+    }
+  }
+}

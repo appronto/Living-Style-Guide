@@ -1,0 +1,256 @@
+.ap_buttongroup-tabbed {
+
+    ul.mx-list.mx-list-striped.mx-listview-list {
+      border-bottom: 1px solid $gray-primary;
+      display: block;
+      margin-bottom: 64px;
+        li.mx-listview-item {
+            display: inline-block;
+            margin-right: 0px;
+            //margin-bottom: -2px;
+            margin-bottom: 0px;
+            padding: 10px 0;
+            &:first-child{
+              margin-left: 32px;
+            }
+            a {
+
+                padding: 10px 0;
+                color: darken($text-inactive, 20%);
+                border: 0;
+                border-style: solid;
+                border-color: transparent;
+                border-bottom-width: 1px;
+                border-radius: 0;
+                padding-left: 24px;
+                padding-right: 24px;
+
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                &:hover,
+                &:focus {
+                    color: $text-primary;
+                    border-color: $brand-info;
+                    background: transparent;
+                    border-bottom: 1px solid $text-primary;
+                    text-decoration: none;
+                }
+            }
+            &.active > a,
+            &.active > a:hover,
+            &.active > a:focus {
+              color: $brand-info;
+              border: 0;
+              border-bottom: 2px solid $brand-info;
+              background-color: transparent;
+              text-decoration: none;
+            }
+        }
+    }
+}
+
+
+.ap_buttongroup-tabbed {
+  border-bottom: 1px solid $gray-primary;
+  display: block;
+
+  a {
+    display: inline-block;
+    margin-right: 0px;
+    margin-bottom: -2px;
+    //margin-bottom: 0px;
+    padding: 10px 0;
+    &:first-child{
+      margin-left: 32px;
+    }
+    padding: 10px 0;
+    color: darken($text-inactive, 20%);
+    border: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+        color: $text-primary;
+        border-color: $brand-info;
+        background: transparent;
+        border-bottom: 1px solid $text-primary;
+        text-decoration: none;
+    }
+  }
+  .active > a,
+  .active > a:hover,
+  .active > a:focus {
+    color: $brand-info;
+    border: 0;
+    border-bottom: 2px solid $brand-info;
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
+
+// active state on outside
+
+/*
+.ap_buttongroup-tabbed.active1 .mx-link:nth-child(1),
+.ap_buttongroup-tabbed.active2 .mx-link:nth-child(2),
+.ap_buttongroup-tabbed.active3 .mx-link:nth-child(3),
+.ap_buttongroup-tabbed.active4 .mx-link:nth-child(4),
+.ap_buttongroup-tabbed.active5 .mx-link:nth-child(5),
+.ap_buttongroup-tabbed.active6 .mx-link:nth-child(6),
+.ap_buttongroup-tabbed.active7 .mx-link:nth-child(7),
+.ap_buttongroup-tabbed.active8 .mx-link:nth-child(8){
+  a {
+    color: $brand-info;
+    border: 0;
+    border-bottom: 2px solid $brand-info;
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
+*/
+
+$amountOfLinks: 20;
+@for $i from 1 through $amountOfLinks {
+  .ap_buttongroup-tabbed.active#{$i} .mx-link:nth-child(#{$i}){
+      a {
+      color: $brand-info;
+      border: 0;
+      border-bottom: 2px solid $brand-info;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+  }
+}
+
+
+
+// Auto makes buttons look nice depending on row/col
+.btn + .btn, .mx-link + .mx-link{
+  margin-left: 15px;
+}
+
+.col-center{
+  > .btn + .btn{
+    margin-left: 0px;
+  }
+}
+
+// Depricated
+.ap_buttongroup-footer, .mx-dataview-controls{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+
+  a, button{
+    margin-left: 15px;
+  }
+}
+
+.ap_buttongroup-right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+
+  .mx-link{
+    padding-left: 15px;
+  }
+  button.mx-button{
+    margin-left: 15px;
+  }
+}
+
+.mx-window.mx-window-view .mx-window-body > .mx-dataview > .mx-dataview-controls, .mx-window.mx-window-view .mx-window-body > .mx-placeholder > .mx-dataview > .mx-dataview-controls{
+  display: flex;
+  align-items: center;
+  border-top: 0px;
+  background-color: rgba(0,0,0,0.03);
+}
+
+
+
+
+//subnav
+.ap_buttongroup-subnav {
+  border-bottom: 1px solid $gray-primary;
+  background-color: $navigation-sub-bg;
+  padding-left: 30px;
+
+  .mx-link {
+    padding: 6px 12px;
+    a{}
+    a:first-child{
+      //margin-left: 30px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $text-primary;
+        background-color: $navigation-sub-bg-hover;
+    }
+  }
+  .active > a,
+  .active > a:hover,
+  .active > a:focus {
+    color: $brand-info;
+    background-color: $navigation-sub-bg-active;
+  }
+}
+
+
+$amountOfLinks: 20;
+@for $i from 1 through $amountOfLinks {
+  .ap_buttongroup-subnav.active#{$i} .mx-link:nth-child(#{$i}){
+      a {
+      color: $navigation-color-active;
+
+    }
+  }
+}
+
+
+
+// footer buttongroup
+
+.ap_buttongroup-fixed{
+  position: fixed;
+  padding: 4px 48px;
+  width: 100%;
+  bottom: 0;
+  //background-color: $white-secondary;
+  //border-top: 1px solid $gray-primary;
+  display: flex;
+  justify-content: flex-end;
+}
+
+// doesnt seem to work in T layout
+.ap_region-sidebar{
+  .ap_buttongroup-fixed{
+  //  padding: 16px 64px;
+  //  border-top: 1px solid $gray-lighter;
+  //  width: 25%; //width of sidebar
+
+  }
+}
+.ap_layoutsub-dual.triple.tsplit .ap_layout-flex_content > div:nth-child(2) > div:nth-child(2){
+  .ap_buttongroup-fixed{
+    width: inherit;
+    padding: 10px 20px;
+    border-top: 1px solid $gray-primary;
+
+    button{
+      width: 100%;
+    }
+  }
+}

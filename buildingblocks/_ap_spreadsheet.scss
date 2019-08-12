@@ -1,0 +1,135 @@
+.ap_spreadsheet{
+  display: inline-block;
+  > ul{
+    > li > .mx-dataview > .mx-dataview-content{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+
+      .ap_spreadsheet-label{
+        max-width: 80px;
+        overflow: hidden;
+        height: 70px;
+        transform: translateX(30px) rotatez(-45deg);
+
+      }
+
+      .ap_spreadsheet-cell{
+        max-width: 80px;
+      }
+    }
+  }
+
+  input{
+    border-radius: 0;
+  }
+
+
+
+  &-fixedcolleft{
+    bottom: 0px;
+    position: absolute;
+    min-width: 420px;
+    overflow: hidden;
+    height: 34px;
+    z-index: 500;
+
+    *{
+      //vertical-align: bottom;
+    }
+  }
+
+  &-content{
+    white-space:nowrap;
+    margin-left: 420px;
+
+
+
+    ul{
+      padding: 0;
+      margin: 0;
+      li{
+        display: inline-block;
+        padding: 0;
+      }
+    }
+
+
+
+  }
+}
+
+//-- deletes all labels except first
+.ap_spreadsheet > ul > li + li  .ap_spreadsheet-label{
+    height: 0px !important; //height instead of displaynone so all col's are as wide as label
+}
+
+
+
+.ap_spreadsheet{
+  .mx-dateinput{
+    overflow: hidden;
+    .form-control{
+      max-height: 24px;
+
+    }
+    button{
+
+      max-height: 24px;
+    }
+  }
+
+  .alert{
+    position: absolute;
+    margin-top: 0px;
+    z-index: 500;
+    box-shadow: 0 2px 10px -1px rgba(0,0,0,0.3);
+    border: 1px solid $brand-warning;
+    min-width: 150px;
+  }
+
+   .mandatory input {
+  	border: 1px solid $brand-warning;
+  	}
+
+    .copythroughfirst input{
+      border: 1px solid red;
+      background-color: $white-secondary;
+      background-color: red;
+      font-weight: 600;
+    }
+
+   .copythrough input {
+  		background-color: $white-secondary;
+      border: 1px solid $white;
+      background-color: $white;
+      color: $text-inactive;
+  }
+}
+
+
+//---------------- submitted
+.ap_spreadsheet{
+  .submitted{
+    input {
+      border: 1px solid $gray-lighter;
+      color: $text-inactive;
+      transition: color 0.2s ease-out;
+
+    	&:hover,
+    	&:focus{
+        color: $text-primary;
+        transition: color 0.5s ease-out;
+    	}
+    }
+    span{
+      color: $text-inactive;
+    }
+    button {
+      pointer-events: none;
+    	background-color: $white;
+    	border-color: $text-inactive;
+      color: $text-inactive;
+    }
+  }
+}

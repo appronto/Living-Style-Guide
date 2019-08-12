@@ -1,0 +1,41 @@
+
+
+.ap_mod-workflow-buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+.ap_mod-workflow-buttons .mx-list{
+  display: flex;
+  justify-content: flex-end;
+}
+.ap_mod-workflow-buttons{
+  width: 100%;
+  margin-top: 0px;
+  border-top: 1px solid $gray-primary;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  li{
+    border: none !important;
+    padding: 0 !important;
+  }
+  .btn{
+    margin-right: 16px;
+
+  }
+}
+
+.mx-grid-search-input{
+  padding: 0px;
+  width: 160px !important;
+}
+
+.widget-pagination{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  li{
+    border-radius: 4px;
+  }
+}

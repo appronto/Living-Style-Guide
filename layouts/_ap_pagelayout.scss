@@ -1,0 +1,73 @@
+@import "../custom-variables";
+
+
+body{
+  //background-color: $bg-color;
+}
+
+.ap_region-main{
+
+}
+
+
+.ap_region-sidebar{
+  background-color: $white;
+  border-left: 1px solid $gray-primary;
+  //overflow-y: scroll;
+  //position: absolute;
+  //height: calc(100vh - 80px);
+  //width: 25%;
+  //right: 0px;
+}
+
+
+
+//---- dual layout
+.ap_regionwrap-dual{
+  > .row{
+    > [class*="col-md"]{
+      //background-color: $white;
+      background-color: transparent;
+    }
+    > [class*="col-md"]:first-child{
+      background-color: $white;
+      //background-color: transparent;
+    }
+  }
+}
+
+//---- dual layout
+.ap_regionwrap-dual .row > [class*="col-md"] > .mx-placeholder > .mx-dataview{
+  width: 100%;
+}
+
+@media (min-width: 768px){
+  .mx-layoutgrid.ap_regionwrap-dual {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    > .row{
+      display: flex;
+      align-items: stretch;
+
+    > [class*="col-md"]{
+        min-height: calc(100vh - 61px;);
+        //background-color: $white;
+
+      >  .mx-placeholder{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: calc(100vh - 61px;);
+        }
+      }
+      [class*="col-md"]:first-child{
+        //background-color: transparent;
+      }
+    }
+  }
+}

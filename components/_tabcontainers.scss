@@ -1,0 +1,62 @@
+// Style with lines
+
+.mx-tabcontainer {
+    .mx-tabcontainer-tabs {
+      border-bottom: 1px solid $gray-primary;
+
+
+
+
+        li {
+            &:first-child{
+              margin-left: 32px;
+            }
+            margin-right: px;
+            margin-bottom: -2px;
+            > a {
+                padding: 10px 0;
+                color: darken($text-inactive, 20%);
+                border: 0;
+                border-style: solid;
+                border-color: transparent;
+                border-bottom-width: 1px;
+                border-radius: 0;
+                padding-left: 24px;
+                padding-right: 24px;
+
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                &:hover,
+                &:focus {
+                    color: $text-primary;
+                    border-color: $brand-info;
+                    background: transparent;
+                    border-bottom: 1px solid $text-primary;
+                }
+            }
+            &.active > a,
+            &.active > a:hover,
+            &.active > a:focus {
+              color: $brand-info;
+              border: 0;
+              border-bottom: 2px solid $brand-info;
+              background-color: transparent;
+            }
+        }
+    }
+}
+
+
+/* -- breaks all children so not a viable solution */
+.tab-lastright > ul > li:nth-last-of-type(2), .tab-lastright > ul > li:nth-last-of-type(1){
+  float: right;
+}
+
+.bg-secondary.mx-tabcontainer .mx-tabcontainer-content {
+    background-color: $bg-color-secondary;
+}
+
+.bg-main.mx-tabcontainer .mx-tabcontainer-content {
+    background-color: $bg-color;
+}

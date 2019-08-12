@@ -1,0 +1,60 @@
+
+
+
+.ap_media{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  //align-items: flex-start;
+  h1,h2,h3,h4,h5,h6, .h1,.h2,.h3,.h4,.h5,.h6,{
+    margin: 0;
+    padding: 0;
+  }
+  .ap_media-img{
+    margin: 8px;
+    width: 64px;
+    height: 64px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .ap_media-body{
+    margin:  8px ;
+    width: calc(100% - 64px);
+    display: flex;
+    flex-direction: column;
+    //background-color: red;
+  }
+}
+
+
+.card.ap_media.ap_clickable{
+  position: relative; //makes button position work
+  padding-top: 15px;
+  padding-bottom: 30px;
+
+  &:hover{
+    background-color: rgba($link-color, 0.1);
+  }
+  .glyphicon {
+    font-size: 30px;
+    margin-bottom: 10px
+  }
+  .title{
+    margin-bottom: 0;
+  }
+  .sub{
+
+  }
+
+  button{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}

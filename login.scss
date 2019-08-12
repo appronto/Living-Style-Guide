@@ -1,0 +1,179 @@
+@import "custom-variables";
+
+//login.css
+
+
+
+.page-wrap{
+  display: flex;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
+  width: 100%;
+  background-color: $link-color;
+  flex-direction: row-reverse; // makes bar left or right
+
+  .main-img{
+    width: calc(100% - 400px);
+    display: none;
+
+
+    .mx-placeholder{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img{
+      max-height: 70vh;
+    }
+    @media (min-width: $screen-sm) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    background: url(../../web/sass/app/_projectspecific/img/bg-login.jpg);
+    background-size: cover;
+
+    .quote-bg{
+      background-color:rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+
+      .quote, .quote-author{
+        color: $white;
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: $fontweight-semibold;
+        //background-color: red;
+        text-align: center;
+        max-width: 350px;
+      }
+      .quote-author{
+        font-weight: $fontweight-regular;
+      }
+    }
+  }
+
+  .login-bar{
+    z-index: 10;
+
+    padding: 25px 70px 5px;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $bg-color-secondary;
+    @media (min-width: $screen-sm) {
+      width: 30%;
+      max-width: 500px;
+      min-width: 400px;
+      box-shadow: 0px 10px 30px -6px rgba(0,0,0,0.5);
+    }
+
+    .login-logo{
+      width: 64px;
+      height: 64px;
+      background: url(../../web/sass/app/_projectspecific/img/logo.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+    }
+
+    .login-form{
+      //max-width: 300px;
+      margin-bottom: 180px;
+      .title{
+        font-family: $font-family-base;
+        color: $text-secondary;
+        font-weight: $fontweight-bold;
+        margin-bottom: 0;
+      }
+      .sub{
+        font-family: $font-family-base;
+        color: $text-primary;
+        font-size: 14px;
+        //margin-bottom: 32px; //fixed with login-form-input padding-top
+      }
+      .login-form-inputs{
+        padding-top: 32px;
+      }
+      .login-form-widget{
+        margin-top: 32px;
+      }
+      #usernameLabel, #passwordLabel{
+        display: none;
+      }
+
+      .user-icn, .password-icn{
+        margin-top: 8px;
+        margin-left: 12px;
+        width: 24px;
+        height: 24px;
+        background: url(../../web/sass/app/_projectspecific/img/account-circle-1.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        position: absolute;
+      }
+
+      .password-icn{
+        background: url(../../web/sass/app/_projectspecific/img/lock-close-1.svg);
+      }
+
+
+      .form-control{
+        height: 40px;
+        padding: 0 0 0 48px;
+        font-family: $font-family-base;
+        font-weight: $fontweight-semibold;
+
+        &::placeholder{
+          color: #6C6E70;
+        }
+      }
+      .padding-default input.form-control{
+        padding: 8px 10px;
+      }
+      .login-form-widget .form-control{
+        padding: 0 0 0 8px;
+      }
+
+
+
+      button{
+        height: 56px;
+        width: 100%;
+        //background-color: $brand-info;
+        border: 0px;
+        font-size: 18px;
+        font-weight: $fontweight-semibold;
+        &:hover{
+          //background-color: darken($brand-info, 4);
+        }
+      }
+      .mx-link {
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+}
+
+.page-wrap .login-bar .login-form .mx-textbox .form-control{
+  flex: auto;
+  display: block;
+  padding: 0 10px;
+}

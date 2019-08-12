@@ -1,0 +1,16 @@
+.ap_table{
+  background-color: $white;
+  border: 1px solid $gray-lighter;
+
+  tr:first-child td * {
+    font-weight: 600;
+  }
+}
+
+.ap_order{
+  width: 100%;
+  //border-top: 1px solid $text-inactive;
+  //padding-top: 30px;
+  padding-bottom: 30px;
+  vertical-align: center;
+}

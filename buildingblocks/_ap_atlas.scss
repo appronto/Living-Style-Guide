@@ -1,0 +1,24 @@
+// Docuemnt restyling often used atlas building blocks.
+
+.card.cardaction{
+  margin: 15px;
+  max-width: 25%;
+  min-width: 15%;
+  align-items: flex-start !important;
+  display: inline-flex !important;
+
+  .mx-link.card-image{
+    .glyphicon{
+      font-size: 42px;
+
+    }
+  }
+  .mx-link{
+    a{
+      font-family: $font-family-brand;
+      font-weight: $fontweight-bold;
+      font-size: 20px;
+
+    }
+  }
+}

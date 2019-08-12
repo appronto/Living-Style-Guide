@@ -1,0 +1,29 @@
+
+
+.ap_listview-noempty{
+  &.mx-listview{
+    > ul.mx-listview-list{
+      > li.mx-listview-empty{
+        display: none;
+      }
+    }
+  }
+}
+
+.ap_listview-horizontal{
+  &.mx-listview{
+    > ul.mx-listview-list{
+      display: flex;
+      > li.mx-listview-empty{
+
+      }
+    }
+  }
+}
+
+.ap_table-header + .mx-listview{
+  > ul > li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

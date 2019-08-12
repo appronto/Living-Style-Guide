@@ -1,0 +1,35 @@
+.ap_breadcrumbs{
+  a{
+    font-size: $font-size-h6;
+    color: $brand-info;
+  }
+}
+
+// behaviour in headers
+.ap_header{
+  //above title
+  .ap_breadcrumbs{
+    padding-top: 32px;
+  }
+  .ap_breadcrumbs + .title{
+    padding-top: 0px;
+  }
+
+  //under title
+  .title + .ap_breadcrumbs{
+    padding-top: 4px;
+  }
+}
+
+// behaviour in cards
+.card{
+  .ap_breadcrumbs{
+    color: $text-inactive;
+    a{
+      font-size: 14px;
+      font-weight: $fontweight-regular;
+      color: $brand-info;
+      padding-right: 4px;
+    }
+  }
+}

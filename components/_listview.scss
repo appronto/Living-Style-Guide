@@ -1,0 +1,242 @@
+// delete background-color: $grid-bg-selected !important; line 59 in lib/listview
+
+
+
+//-------------------Listview Reset
+
+//this needs refactoring
+.mx-listview{
+  background-color: transparent;
+  > .mx-listview-searchbar{}
+  > ul.mx-list.mx-list-striped.mx-listview-list{
+    background-color: transparent;
+    > li.mx-listview-item{
+      background-color: transparent;
+      padding: 5px 10px 10px;
+      border: 1px #ddd;
+      border-style: solid solid none;
+
+      &:first-child {
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+      }
+      &:last-child {
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+          border-style: solid;
+      }
+      &:nth-child(2n+1){
+        background-color: transparent;
+      }
+
+      &.selected{
+        background-color: rgba(0,0,0,0.03) !important;
+
+        &:hover *{
+          //color: inherit;
+          //cursor: default;
+        }
+      }
+      &:hover *{
+        //color: $brand-info;
+        //cursor: pointer;
+      }
+
+      .mx-link, .mx-link .glyphicon, a {
+        //cursor: pointer !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+  //-------------------Listview without listen
+
+.mx-listview.mx-listview-selectable{
+  > .mx-listview-searchbar{}
+  > ul.mx-list.mx-list-striped.mx-listview-list{
+    > li.mx-listview-item{
+      &:hover *{
+        //color: inherit;
+        //cursor: auto;
+      }
+    }
+  }
+}
+
+
+//-------------------Listview with clickable
+
+
+.mx-listview.mx-listview-clickable{
+  > .mx-listview-searchbar{}
+  > ul.mx-list.mx-list-striped.mx-listview-list{
+    > li.mx-listview-item{
+      &:hover *{
+        //color: inherit;
+        //cursor: pointer;
+      }
+    }
+  }
+}
+
+.mx-listview.mx-listview-clickable .mx-listview{
+  //background-color: red;
+}
+  //-------------------empty state
+
+  .mx-listview{
+    > .mx-listview-searchbar{}
+    > ul.mx-list.mx-list-striped.mx-listview-list{
+      > li.mx-listview-empty{
+        padding: 20px 0;
+      }
+    }
+  }
+
+// end
+
+
+// ------------------------ stylingless
+.mx-listview.listview-stylingless{
+  //background-color: transparent;
+  > .mx-listview-searchbar{}
+  > ul.mx-list.mx-list-striped.mx-listview-list{
+    //background-color: transparent;
+    > li.mx-listview-item{
+      //background-color: transparent;
+      padding: 5px 0px 10px;
+      //border: 1px #ddd;
+      border-style: none;
+
+      &:first-child {
+          //border-top-left-radius: 4px;
+          //border-top-right-radius: 4px;
+      }
+      &:last-child {
+          //border-bottom-left-radius: 4px;
+          //border-bottom-right-radius: 4px;
+          border-style: none;
+      }
+      &:nth-child(2n+1){
+        //background-color: transparent;
+      }
+
+      &.selected{
+        //background-color: rgba(0,0,0,0.03) !important;
+
+        &:hover *{
+          //color: inherit;
+          //cursor: default;
+        }
+      }
+      &:hover *{
+        //color: $brand-info;
+        //cursor: pointer;
+      }
+
+      .mx-link, .mx-link .glyphicon, a {
+        //cursor: pointer !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//##------------------- AP_styles
+.mx-listview.ap_listview-linedivider, .mx-listview.ap_listview-linedivider-topbottom{
+  > .mx-listview-searchbar{}
+  > ul.mx-list.mx-list-striped.mx-listview-list{
+    > li.mx-listview-item{
+      border-radius: 0;
+      background-color: transparent;
+      padding: 18px 0px;
+      border: 1px $gray-primary;
+      //border-left: 0px;
+      //border-right: 0px;
+      border-style: solid none none;
+
+      &:first-child {
+        //padding-top: 0px;
+          border-style:  none;
+      }
+
+      &:hover{
+          background-color: $white-secondary;
+      }
+    }
+  }
+}
+
+.mx-listview.ap_listview-linedivider-topbottom{
+  > .mx-listview-searchbar{}
+  > ul.mx-list.mx-list-striped.mx-listview-list{
+    > li.mx-listview-item{
+      &:first-child {
+        border-style: solid none none;
+      }
+      &:last-child{
+        border-style: solid none solid;
+      }
+    }
+  }
+}
+
+
+
+
+
+.mx-listview.ap_listview-formgroup{
+  > .mx-listview-searchbar{}
+  > ul.mx-list.mx-list-striped.mx-listview-list{
+    > li.mx-listview-item{
+      border-radius: 0;
+      background-color: transparent;
+      padding: 0px 0px;
+      //border: 1px $gray-primary;
+      //border-left: 0px;
+      //border-right: 0px;
+      border-style: none none none;
+
+      &:last-child {
+        //padding-top: 0px;
+          border-style:  none;
+      }
+
+      &:first-child {
+        //padding-top: 0px;
+          border-style:  none;
+      }
+
+      &:hover{
+          background-color: transparent;
+      }
+    }
+  }
+}
+
+.ap_listview-header.mx-layoutgrid.mx-layoutgrid-fluid.container-fluid{
+  padding: 0px 10px 0 10px;
+}

@@ -1,0 +1,49 @@
+@import "../custom-variables";
+
+.login-form-widget{
+  padding-top: 30px;
+  //padding-bottom: 30px;
+
+
+  .btn.btn-default.submit{
+    //background-color: $brand-warning;
+    //color: $white;
+    //border-radius: 200px;
+    width: 50%;
+    margin-left: 25%;
+
+  }
+
+  .forgotPwd{
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  + .mx-link{
+    display: block;
+    text-align: center;
+  }
+}
+
+.LSG_spacer-content{
+    height: 50px;
+    width: 50px;
+    background-color: $brand-info;
+}
+
+.LSG_spacer-paddingwrap{
+  background-color: $brand-warning;
+  display: inline-block;
+}
+
+.LSG_spacer-marginwrap{
+  background-color: $brand-danger;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.lsg-colorwrap{
+    background-color: $brand-info;
+}

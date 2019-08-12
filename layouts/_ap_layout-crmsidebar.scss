@@ -1,0 +1,244 @@
+@import "../custom-variables";
+
+$sidebar-width: 120px;
+
+.ap_layout-crmsidebar{
+  background-color: $white-secondary;
+  display: flex;
+  //flex-direction: row;
+  min-height: 100vh;
+
+
+
+  .main{
+    margin-left: $sidebar-width;
+    //min-height: 100vh;
+    width: 100%;
+    padding-bottom: 0px;
+  }
+
+  .sidebar{
+    width: $sidebar-width;
+    min-height: 100vh;
+    background-color: $white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+    //position: absolute;
+    position: fixed;
+    z-index: 101;
+
+
+    .menu-item-wrap{
+      //display: none;
+      &.catch{
+        .menu-item{
+          height: 100vh;
+          cursor: auto;
+          &:hover{
+            background-color: $white;
+          }
+        }
+      }
+
+      .menu-item{
+        z-index: 101;
+        height: 80px;
+        margin: 0;
+        cursor: pointer;
+        background-color: $white;
+
+        a{
+          display: none;
+        }
+
+        &:hover{
+          background-color: $gray-lighter;
+        }
+
+
+        &.active{
+          background-color: $gray-lighter;
+          color: $brand-info;
+        }
+
+        &.logo{
+          background-image: url(../../../img/logo.svg);
+          background-repeat: no-repeat;
+          background-size: 50px;
+          background-position: center;
+        }
+      }
+
+      &:hover .submenu{
+        margin-left: $sidebar-width;
+        opacity: 1;
+        transition: all 0.5s ease;
+      }
+      .submenu{
+        z-index: -1;
+        transition: all 0.5s ease;
+        opacity: 0; //on for animation
+        margin-left: -400px; //on for animation
+        //margin-left: $sidebar-width; //off for animation
+
+        padding-left: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        width: 400px;
+        background-color: lighten($gray-lighter, 2%);
+        position: absolute;
+        height: 100vh;
+        overflow-y: auto;
+        top: -80px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+      }
+    }
+  }
+}
+
+
+
+//-----------------------------------
+// Rename sidebar to sidenav due to conflicts with sidebar page
+//-----------------------------------
+
+.ap_layout-crmsidebar{
+  .topnav{
+    height: 80px;
+    background-color: $white;
+
+    .search{
+      display: inline-block;
+      padding-left: 32px;
+      padding-top: 28px;
+
+      .icn-search{
+        background-image: url(../../../img/search.svg);
+        position: absolute;
+        margin-top: -4px;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-position: center;
+
+      }
+
+      .mx-link{
+        padding-left: 32px;
+        padding-top: -20px;
+      }
+    }
+
+    .user{
+      float: right;
+      padding-right: 48px;
+      padding-top: 28px;
+
+      .icn-avatar{
+        background-image: url(../../../img/avatar.svg);
+        position: absolute;
+        margin-top: -4px;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-position: center;
+      }
+      .name{
+        display: inline-block;
+        padding-right: 8px;
+        text-align: right;
+
+      }
+    }
+  }
+}
+
+.ap_layout-crmsidebar .sidebar .menu-item-wrap .menu-item{
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+
+  &.mijntaken{
+    background-image: url(../../../img/mijntaken.svg);
+  }
+  &.ga{
+    background-image: url(../../../img/ga.svg);
+  }
+  &.claims{
+    background-image: url(../../../img/claims.svg);
+  }
+  &.beheer{
+    background-image: url(../../../img/beheer.svg);
+  }
+  &.mijnnhg{
+    background-image: url(../../../img/mijnnhg.svg);
+  }
+  &.esb{
+    background-image: url(../../../img/esb.svg);
+  }
+  &.config{
+    background-image: url(../../../img/config.svg);
+  }
+}
+
+
+.submenu{
+
+  .navbar.mx-navbar{
+    background-color: transparent;
+    ul.navbar-nav{
+      background-color: transparent;
+      float: none;
+
+      li.mx-navbar-item.dropdown{
+        background-color: transparent;
+        float: none;
+
+        a{
+          padding-top: 32px;
+          font-weight: 700;
+          color: $text-primary;
+          padding-left: 0;
+
+          .caret{
+            display: none;
+          }
+          &:hover{
+            background-color: transparent;
+          }
+        }
+
+        ul.dropdown-menu{
+          background-color: transparent;
+          position: relative;
+          display: block;
+          float: none;
+          border: none;
+          box-shadow: none;
+
+          li.mx-navbar-subitem{
+            background-color: transparent;
+             a{
+              margin: 0;
+              padding: 0;
+              display: block;
+              font-size: 14px;
+              line-height: 32px;
+              font-weight: 400;
+              color: $brand-info;
+
+              &:hover{
+                color: darken($brand-info, 20%);
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

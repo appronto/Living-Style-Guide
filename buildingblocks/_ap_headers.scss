@@ -1,0 +1,467 @@
+
+.ap_header{
+  //min-height: 160px;
+  min-height: 120px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .title, .mx-title, h1{
+    padding-top: 32px;
+    margin-top: 0;
+    margin-bottom: -6px;
+    color: $text-secondary;
+    display: inline-block;
+    padding-right: 10px;
+
+
+  }
+
+  .sub, h3{
+    margin: 0;
+    color: $text-primary;
+  }
+
+   .sub + .title{
+     padding-top: 0;
+   }
+   .title + .sub{}
+
+  .title.mx-link{
+    display: block;
+    color: $brand-info;
+  }
+  .title.d-inline-block{
+    margin-right: 10px;
+  }
+  .title+button{
+    margin-top: -28px;
+  }
+  .mx-link+.mx-link{
+    padding-left: 10px;
+  }
+
+  h3+h6{
+    //background-color: red;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .ap_header{
+    min-height: 0px;
+    padding-left: 15px;
+    padding-bottom: 30px;
+
+    .title, .mx-title, h1{
+      padding-top: 0px;
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: $fontweight-regular;
+
+
+      &.bold{
+        font-weight: $fontweight-bold;
+      }
+    }
+  }
+}
+
+
+
+
+.ap_header.row-split{
+  align-items: baseline;
+}
+
+
+
+
+.card, .modal-body, .col-md-8{
+  .ap_header{
+    padding-left: 0px;
+    min-height: auto;
+    .title{
+      padding-top: 0px;
+      padding-bottom: 24px;
+    }
+    h4.title{
+      padding-top: 24px;
+      padding-bottom: 0px;
+    }
+  }
+}
+
+//removes spacing for first header when in groupbox
+.mx-groupbox-body > div:first-child > .ap_header > .title{
+  padding-top: 0;
+}
+
+
+
+
+
+
+/*
+
+
+
+.ap_header-inclbuttongroup{
+  padding-left: 32px;
+  padding-right: 32px;
+
+  .title, .mx-title, h1{
+    display: inline-block;
+    padding-top: 32px;
+    margin-top: 0;
+    margin-bottom: -6px;
+    font-weight: 800;
+    color: $text-secondary;
+    font-size: 64px;
+  }
+
+  .sub, h3{
+    margin: 0;
+    text-transform: uppercase;
+    color: $text-primary;
+  }
+
+   .sub + .title{
+    color: red;
+  }
+
+  .title.mx-link{
+    display: block;
+    color: $brand-info;
+  }
+
+  .ap_buttongroup{
+    display: inline-block;
+    &-right{
+      float: right;
+      padding-top: 24px;
+    }
+  }
+}
+
+.ap_header, .ap_header-icnsplit{
+  .ap_icn-container{
+    float: left;
+    margin-top: 32px;
+    margin-right: 24px;
+    height: 88px;
+    width: 88px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    .ap_icn{
+      height: 48px;
+      width: 48px;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+    }
+  }
+}
+
+
+
+.ap_header-inclbutton{
+  & * {
+    display: inline-block;
+  }
+
+  .title, .mx-title, h1{
+    padding-top: 32px;
+    margin-top: 0;
+    margin-bottom: -6px;
+    font-weight: 800;
+    color: $text-secondary;
+    font-size: 64px;
+    display: inline-block;
+    padding-right: 10px;
+  }
+  .mx-link{
+    padding-right: 20px;
+  }
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6{
+  .ap_header{
+    min-height: 0px;
+    padding-left: 0px;
+    padding-bottom: 30px;
+
+    .title, .mx-title, h1{
+      padding-top: 0px;
+      //font-size: 32px; //mobile size
+      //line-height: 40px; //mobile size
+      font-weight: $fontweight-regular;
+
+      &.bold{
+        font-weight: $fontweight-bold;
+      }
+    }
+  }
+}
+
+.col-md-7, .col-md-8, .col-md-9, .col-md-10{
+  .ap_header{
+    min-height: 0px;
+    padding-left: 0px;
+    padding-bottom: 30px;
+
+    .title, .mx-title, h1{
+      //padding-top: 0px;
+      font-size: 40px; //mobile size
+      //line-height: 40px; //mobile size
+      //font-weight: $fontweight-regular;
+
+      &.bold{
+        //font-weight: $fontweight-bold;
+      }
+    }
+  }
+}
+
+
+
+
+
+// ----- nested styles
+
+.card, .modal-dialog{
+  .ap_header, .ap_header-inclbutton{
+    padding-left: 0px;
+    min-height: 60px;
+    .title{
+      text-transform: capitalize;
+      padding-top: 0;
+      padding-bottom: 8px;
+      font-weight: 800;
+      font-size: 24px;
+    }
+    .sub, h3{
+      //margin: 0;
+      //text-transform: uppercase;
+      //color: $text-primary;
+      font-size: 16px;
+    }
+  }
+}
+
+
+
+
+
+.ap_region-sidebar{
+  .ap_header{
+    background-color: $brand-primary;
+    .title, .sub{color: $white}
+  }
+}
+
+
+.ap_header-mobilelogin{
+  margin: -15px -15px 30px -15px;
+  width: calc(100% + 30px);
+  height: 300px;
+  display: block;
+
+  background: url(../../sass/custom/projectspecific/img/header-inlog.png);
+  background-size: cover;
+  background-position: center;;
+}
+
+
+.ap_header-icnsplit{
+  display: flex;
+  align-items: center;
+   *{
+    margin: 0;
+    padding: 0;
+  }
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+
+  .ap_icn-container{
+    float: none;
+    margin-top: 22px;
+  }
+
+  .ap_breadcrumbs{
+    a{
+      font-size: 16px;
+      text-transform: capitalize;
+      font-weight: $fontweight-regular;
+      color: $brand-info;
+    }
+  }
+
+  .title, .mx-title, h1{
+    font-weight: 800;
+    color: $text-secondary;
+    font-size: 64px;
+    margin-top: -2px;
+    margin-left: -4px
+  }
+
+  .sub, h3{
+    margin: 0;
+    margin-top: -6px;
+    color: $text-primary;
+    font-size: 18px;
+    font-weight: $fontweight-semibold;
+  }
+}
+
+.ap_header .ap_breadcrumbs +  .title{
+  padding-top: 0px;
+}
+
+.ap_headerimg{
+  width: calc(100% - 30px );
+  margin-top: -32px;
+  margin-left: -32px;
+  object-fit: cover;
+  min-height: 170px;
+  position: absolute;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  & + div{
+    margin-top: 150px;
+  }
+}
+
+.ap_header{
+ .alert{
+   margin: 0;
+   padding: 4px 10px;
+ }
+}
+// ----- helper styles
+
+.ap_header.p-center{
+
+}
+
+
+
+
+*/
+
+
+.ap_imgheader{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+
+  .ap_imgheader-img{
+    height: 240px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+  .ap_imgheader-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.60);
+
+    min-height: 100px;
+    padding: 30px;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
+    .title{
+      color: $white;
+    }
+    .sub{
+      color: $white;
+    }
+  }
+}
+
+
+.ap_responsive-topbarheader, .ap_responsive-topbarheader-full{
+  //background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 60px);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  min-height: $topbar-minimalheight;
+  .mx-text{
+    text-align: center;
+    color: $white;
+    width: calc(100% - 60px);
+    //background-color: green;
+    padding: 0;
+    margin: 0;
+  }
+  button{
+    float: none;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: $white;
+    width: 60px;
+    height: 60px;;
+    &:hover, &active{
+      color: $white;
+      background-color: $brand-primary;
+    }
+  }
+  @media(min-width:$screen-md){
+    //background-color: red;
+    position: relative;
+    width: 100%;
+    padding-bottom: 50px;
+    .mx-text{
+      text-align: left;
+      color: $text-secondary;
+      //padding-left: 15px;
+      width: 100%;
+    }
+  }
+}
+
+
+.ap_responsive-topbarheader-full{
+  justify-content: space-between;
+  background-color: $navigation-bg;
+  width: 100%;
+  right: auto;
+  margin-left: -15px;
+  @media(min-width:$screen-md){
+    background-color: inherit;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  button{
+    width: auto;
+    &.btn-primary{
+      background-color: $brand-primary;
+    }
+  }
+}

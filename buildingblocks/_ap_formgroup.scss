@@ -1,0 +1,49 @@
+.ap_formgroup{
+
+  // 6:9 fix --- delete under this if above 7:14 -----
+  .form-group{
+    .control-label.col-sm-4{
+    //  width: 50%;
+    }
+    .col-sm-8{
+    //  width: 50%;
+    }
+  }
+  // 6:9 fix --- delete above this if above 7:14  ^^^^^^
+
+  .form-group{
+    margin: 0;
+    color: $text-secondary;
+     .control-label {
+      font-size: inherit;
+      text-align: left;
+      color: inherit;
+      padding-left: 0;
+    }
+    p{
+      color: inherit;
+    }
+    .form-control{
+      //padding: 8px 10px; //default atlas
+      margin: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+// controls form small text
+.ap_formgroup.p-sm{
+  .form-group{
+    .form-control{
+      padding: 4px 10px;
+    }
+    .btn, .mx-button {
+    padding: 3px 9px 5px;
+    }
+  }
+}
+
+
+.form-control-static, .form-group div[class*="textBox"] > label, .form-group div[class*="textArea"] > label, .form-group div[class*="datePicker"] > label{
+  border: none;
+}

@@ -1,0 +1,53 @@
+@import "../custom-variables";
+
+.ap_page{
+  .ap_page-main{
+    width: 100%;
+  }
+}
+
+
+.ap_page-sidebar{
+  display: flex;
+
+  .ap_page-main{
+    width: 80%;
+  }
+  .ap_page-sidebar{
+    padding-left: 0;
+    width: 20%;
+    position: sticky;
+    top: 0px;
+    //height: calc(100vh - 80px);
+    height: 100vh;
+
+    overflow-y: auto;
+
+    background-color: $white;
+    float: right;
+
+    &-header{
+      background-color: $brand-primary;
+      padding: 16px;
+
+      .title, .sub, h5,h3{
+        color: $white;
+      }
+    }
+
+    &-content{
+      padding: 16px;
+
+      .ap_sidebar-item{
+        margin-bottom: 24px;
+      }
+    }
+
+    .mx-listview-empty{
+      font-size: 14px;
+      text-align: left;
+    }
+
+    &.ap_sidebar-right{}
+  }
+}

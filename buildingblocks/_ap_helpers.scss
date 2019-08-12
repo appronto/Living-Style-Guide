@@ -1,0 +1,393 @@
+$sizes: -none     0,
+        -xs       4px,
+        -sm       8px,
+        -md       15px,
+        -lg       24px,
+        -xl       36px,
+        -xs-min   -4px,
+        -sm-min   -8px,
+        -md-min   -16px,
+        -lg-min   -24px,
+        -xl-min   -36px;
+
+// padding-left-none
+// padding-right-xl
+
+@each $size in $sizes {
+    .padding#{nth($size, 1)} {
+        padding:#{nth($size, 2)};
+    }
+
+    .padding-top#{nth($size, 1)} {
+        padding-top:#{nth($size, 2)};
+    }
+
+    .padding-left#{nth($size, 1)} {
+        padding-left:#{nth($size, 2)};
+    }
+
+    .padding-right#{nth($size, 1)} {
+        padding-right:#{nth($size, 2)};
+    }
+
+    .padding-bottom#{nth($size, 1)} {
+        padding-bottom:#{nth($size, 2)};
+    }
+}
+
+@each $size in $sizes {
+    .margin#{nth($size, 1)} {
+        margin:#{nth($size, 2)};
+    }
+
+    .margin-top#{nth($size, 1)} {
+        margin-top:#{nth($size, 2)};
+    }
+
+    .margin-left#{nth($size, 1)} {
+        margin-left:#{nth($size, 2)};
+    }
+
+    .margin-right#{nth($size, 1)} {
+        margin-right:#{nth($size, 2)};
+    }
+
+    .margin-bottom#{nth($size, 1)} {
+        margin-bottom:#{nth($size, 2)};
+    }
+}
+
+.border-left{
+  border-left: 1px solid $border-color-default;
+}
+
+
+// objects with background that are colors
+
+.bg-main{
+  background-color: $bg-color;
+}
+
+.bg-secondary{
+  background-color: $bg-color-secondary;
+}
+.ap_icn-container, .card{
+  &.default{
+    background-color: $brand-default;
+  }
+  &.primary{
+    background-color: $brand-primary;
+  }
+  &.inverse{
+    background-color: $brand-inverse;
+  }
+  &.info{
+    background-color: $brand-info;
+  }
+  &.success{
+    background-color: $brand-success;
+  }
+  &.warning{
+    background-color: $brand-warning;
+  }
+  &.danger{
+    background-color: $brand-danger;
+  }
+}
+
+.float-right{
+  float: right;
+}
+
+.float-left{
+  float: left;
+}
+
+
+// imported from custom.scss
+.displaynone{
+  display: none !important;
+}
+
+// .d-inline-block = atlas
+.displayinlineblock, .d-inline-block{
+  display: inline-block;
+}
+
+
+.width-full{
+  width: 100%;
+}
+
+.width-half{
+  min-width: 50%;
+}
+
+.clickable{
+  //cursor: pointer;
+}
+
+// objects with background that are colors
+
+.bg-main{
+  background-color: $bg-color;
+}
+
+.bg-secondary{
+  background-color: $bg-color-secondary;
+}
+.ap_icn-container{
+  &.default{
+    background-color: $brand-default;
+  }
+  &.primary{
+    background-color: $brand-primary;
+  }
+  &.inverse{
+    background-color: $brand-inverse;
+  }
+  &.info{
+    background-color: $brand-info;
+  }
+  &.success{
+    background-color: $brand-success;
+  }
+  &.warning{
+    background-color: $brand-warning;
+  }
+  &.danger{
+    background-color: $brand-danger;
+  }
+}
+
+.card{
+  &.default{
+    background-color: $brand-default;
+  }
+  &.primary{
+    background-color: $brand-primary;
+  }
+  &.inverse{
+    background-color: $brand-inverse;
+  }
+  &.info{
+    color: $alert-info-color;
+    border-color: $alert-info-border-color;
+    background-color: $alert-info-bg;
+    h1, a{
+      color: $alert-info-color;
+    }
+  }
+  &.success{
+    color: $alert-success-color;
+    border-color: $alert-success-border-color;
+    background-color: $alert-success-bg;
+    h1, a{
+      color: $alert-success-color;
+    }
+  }
+  &.warning{
+    color: $alert-warning-color;
+    border-color: $alert-warning-border-color;
+    background-color: $alert-warning-bg;
+    h1, a{
+      color: $alert-warning-color;
+    }
+  }
+  &.danger{
+    color: $alert-danger-color;
+    border-color: $alert-danger-border-color;
+    background-color: $alert-danger-bg;
+    h1, a{
+      color: $alert-danger-color;
+    }
+  }
+}
+
+
+
+
+// item groups
+
+.ap_item, .ap_item-line{
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+
+  &.bg-secondary{
+    background-color: $white-secondary;
+  }
+}
+
+.ap_item-line, .linedivider, .ap_border-bottom{
+  border-bottom: 1px solid $brand-default;
+}
+
+
+
+
+
+// FLEX styles
+
+.ap_flex{
+  display: flex;
+}
+
+// -O--O--O- //
+.ap_flex-h-spacearound{
+  display: flex;
+  justify-content: space-around;
+}
+
+// O---O---O //
+.row-split, .ap_flex-h-spacebetween{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+// ---OOO--- //
+.row-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &.ap_buttongroup-footer button{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+
+// OOO--- //
+.row-left, .ap_flex-h-split{
+  display: flex;
+  justify-content: flex-start;
+}
+
+// ---OOO //
+.row-right, .ap_flex-h-flexend, .pull-right-wrap{
+  display: flex;
+  justify-content: flex-end;
+}
+
+// ---O--- //
+// ---O--- //
+// ---O--- //
+.col-center{
+  // Atlas helper
+  //display: flex !important;
+  //align-items: center !important;
+  //flex-direction: column !important;
+  //justify-content: center !important;
+}
+
+.ap_flex-v-center{
+  display: flex;
+  align-items: center;
+  flex-direction:  column;
+  width: 100%;
+  // still needs tweaking
+}
+
+
+.row-baseline, .ap_flex-baseline{
+  align-items: baseline !important;
+}
+
+
+
+.ap_flex-item{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.ap_flex-center{
+  display: flex;
+  align-items: center;
+  flex-direction:  column;
+}
+
+.ap_flex-item + .ap_flex-item{
+  border-left: 1px solid $text-inactive;
+}
+
+.ap_flex-grow3{
+  width: 21.25%;
+}
+.ap_flex-grow5{
+  width: 36.25%;
+}
+
+
+// no offset for checkboxes
+.ap_nooffset{
+  [class*="col-sm-offset"] {
+    margin-left: 0px;
+  }
+}
+
+
+//## ------- Atlas Fixes
+
+.mx-listview-clickable {
+  > ul.mx-listview-list{
+    cursor: default;
+    > li.mx-listview-item{
+      cursor: pointer;
+    }
+  }
+}
+
+.mx-demouserswitcher{
+    box-shadow: none;
+}
+
+.mx-incubator.mx-offscreen{ //fixes jumping around of items that are loaded offscreen when they have fixed positions
+  display: none;
+}
+
+.control-label{
+  display: block;
+  max-width: 100%;
+}
+
+
+.pull-right, .pull-left{
+  float: none !important;
+  clear: both !important;
+  animation: pulse 3s infinite;
+  background-color: $brand-danger;
+  color: $white;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #aaa;
+    transform: rotate(0);
+  }
+  50% {
+    background-color: $brand-danger;
+    transform: rotate(180deg);
+  }
+  100% {
+    background-color: #aaa;
+    transform: rotate(360deg);
+  }
+}
+
+/*
+// bug when ending with selector, creates wierd space.
+.mx-referencesetselector-select-button {
+    width: auto;
+    float: right;
+    margin-left: 5px;
+    clear: both;
+}
+*/

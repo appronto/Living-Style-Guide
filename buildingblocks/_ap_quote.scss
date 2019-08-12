@@ -1,0 +1,19 @@
+.ap_quote{
+  display: flex;
+  color: $text-primary;
+
+
+  img{
+    height: 64px;
+    margin-right: 15px;
+  }
+
+  .quote{
+    font-style: italic;
+  }
+  .author{
+    margin-top: 10px;
+    display: block;
+    color: $text-primary;
+  }
+}

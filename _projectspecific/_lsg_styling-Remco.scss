@@ -1,0 +1,116 @@
+.ap_layoutsub-dual .ap_layout-flex_content > div:nth-child(2) > div:nth-child(1){
+  width: 85%;
+  background-color: $bg-color-secondary;
+}
+
+.ap_layoutsub-dual .ap_layout-flex_content > div:nth-child(2) > div:nth-child(2){
+  width: 15%;
+  background-color: $bg-color-secondary;
+}
+.ap_layout-flex_topbar{
+  box-shadow: 0 1px 0px rgba(0,0,0,0.1);
+}
+.lvg_homepage {
+  .ap_header {
+    border-bottom: 1px solid $border-color-default;
+    padding-bottom: 120px;
+    .title{
+        padding-top: 120px;
+    }
+    button{
+      margin-top: 20px;
+    }
+  }
+}
+
+h2{
+  font-weight: 800;
+}
+
+
+
+.ap_border-bottom{
+    padding-bottom: 30px;
+    margin-bottom: 90px;
+}
+
+// Intro image styling
+.ap_intro-image {
+  margin: 90px 0 30px 0;
+}
+
+.ap_table-forcescroll {
+    max-height: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    // background: red;
+}
+// Start of Sticky header css
+.ap_table-sticky {
+  position: relative;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  // edit this part to make the list height fit the layout
+  height: calc(70vh);
+
+  // header height
+  .ap_table-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $gray-lighter;
+    padding: 15px;
+    height: 65px;
+
+    td {
+      vertical-align: middle;
+      span {
+        color: $gray-light;
+      }
+    }
+  }
+  // content box scrolling enabled
+  > div {
+    // height: calc(100hv - 65px);
+  }
+}
+.ap_layout-flex-fix-height {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+// End of sticky header css
+
+.brand-logo {
+  background: url(../../sass/custom/_projectspecific/img/JR-icon.svg) !important;
+}
+
+.ap_full-action-card {
+  width: 300px;
+  height: 200px;
+  padding: 0;
+  position: relative;
+  background-color: green;
+  align-items: flex-start;
+  vertical-align: top;
+  align-content: flex-start;
+}
+
+.ap_card-action {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  // background: red;
+  position: absolute;
+}
+
+// spans have no display setting so they do not count for margins and paddings. General fix ->
+span {
+  display: inline-block;
+}

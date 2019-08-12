@@ -1,0 +1,32 @@
+.widget-header-sort{
+
+  &:hover .sort-header{
+    color: $brand-info;
+  }
+
+  .sort-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //border-color: #D7D7D7;
+    //border-top-width: 0;
+    //border-right: 0;
+    //border-bottom-width: 1px;
+    //border-left: 0;
+    //background-color: transparent;
+    cursor: pointer;
+    font-weight: $fontweight-semibold;
+    font-size: 14px;
+    //text-align: left;
+    padding: 15px 0 0;
+    color: $text-primary;
+
+
+    .sort-icon{
+      color: $brand-info;
+      &.asc{}
+      &.desc{}
+    }
+
+  }
+}

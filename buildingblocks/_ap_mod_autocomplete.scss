@@ -1,0 +1,60 @@
+
+
+.form-group.autoCompleteMainContainer{
+  .select2-selection.select2-selection--single{
+    height: 37px;
+    border-color: $default-border-color;
+    .select2-selection__rendered{
+      padding-top: 5px;
+    }
+  }
+}
+
+
+///////////////////////////////////////////
+// Autocomplete for mendix styling Fixes //
+///////////////////////////////////////////
+
+// make field as big as standard mendix input fields
+.select2-container--default, .select2-selection--single {
+ min-height: 37px !important;
+}
+// align button
+.fix-autocomplete-button-spacing {
+ margin-top: 30px;
+ margin-left: 5px;
+}
+// align label with field
+.autoCompleteMainContainer .autoCompleteLabel {
+ margin-bottom: 5px !important;
+ padding-bottom: 6px !important;
+}
+// hide the original autocomplete icon
+.select2-selection__arrow {
+ display: none !important;
+}
+// aligning text in field
+.select2-selection__rendered {
+ padding: 4px 30px 4px 10px;
+}
+// Fix border colors and adding the mendix select field icon
+.select2-selection--single {
+ border-color: #2222221a !important;
+ $arrow: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15px' height='8px'><polyline id='Line' fill='none' stroke='%23555555' points='0.5 0.5 6 6 11.545361 0.5'></polyline></svg>";
+ padding-right: 30px;
+ background-image: url($arrow);
+ background-repeat: no-repeat !important;
+ background-position: calc(100% - 10px) center !important;
+ -moz-appearance: none;
+ -webkit-appearance: none;
+}
+// fixed styling for clear button
+.select2-selection__clear {
+ line-height: 25px !important;
+ font-size: 20px !important;
+ font-weight: 400 !important;
+ color: #292929a8 !important;
+}
+///////////////////////////////
+// End of autoComplete fixes //
+///////////////////////////////

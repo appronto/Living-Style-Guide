@@ -1,0 +1,107 @@
+.ap_item, .ap_item-line{
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+
+  &.bg-secondary{
+    background-color: $white-secondary;
+  }
+}
+
+.ap_item-line, .ap_border-bottom{
+  border-bottom: 1px solid $brand-default;
+}
+
+
+.ap_item-horizontal{
+  display: flex;
+  //align-items: center;
+  justify-content: space-between;
+  align-items: center;
+
+  .ap_qatable{
+    .form-group, .ap_qaitem{
+      margin-bottom: 0px;
+    }
+  }
+
+  > div{
+    display: inline-block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ap_flex{
+  display: flex;
+}
+
+.ap_flex-h-spacearound{
+  display: flex;
+  justify-content: space-around;
+}
+
+.ap_flex-h-spacebetween{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ap_flex-h-flexstart{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ap_flex-h-flexend{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ap_flex-v-center{
+  display: flex;
+  align-items: center;
+  flex-direction:  column;
+  // still needs tweaking
+}
+
+.ap_flex-item{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.ap_flex-center{
+  display: flex;
+  align-items: center;
+  flex-direction:  column;
+}
+
+.ap_flex-item + .ap_flex-item{
+  border-left: 1px solid $text-inactive;
+}
+
+.ap_flex-grow3{
+  width: 21.25%;
+}
+.ap_flex-grow5{
+  width: 36.25%;
+}

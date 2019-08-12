@@ -1,0 +1,50 @@
+.alert {
+	color: $brand-inverse;
+	border-color: $brand-default;
+	background-color: $brand-default;
+}
+
+.alert-inverse {
+    color: $white;
+    border-color: $brand-inverse;
+    background-color: $brand-inverse;
+}
+
+.alert-bordered {
+    border: 1px solid;
+}
+
+
+//## atlas default but because overriting default, this needs to be here too
+// Color variations
+.alert-success {
+    color: $alert-success-color;
+    border-color: $alert-success-border-color;
+    background-color: $alert-success-bg;
+}
+
+.alert-info {
+    color: $alert-info-color;
+    border-color: $alert-info-border-color;
+    background-color: $alert-info-bg;
+}
+
+.alert-warning {
+    color: $alert-warning-color;
+    border-color: $alert-warning-border-color;
+    background-color: $alert-warning-bg;
+}
+
+.alert-danger {
+    color: $alert-danger-color;
+    border-color: $alert-danger-border-color;
+    background-color: $alert-danger-bg;
+}
+
+//== State
+//## Styling when component is in certain state
+//-------------------------------------------------------------------------------------------------------------------//
+.has-error .alert {
+    margin-top: 8px;
+    margin-bottom: 0;
+}

@@ -1,0 +1,25 @@
+.ap_footer{
+
+
+
+
+}
+
+.ap_footer-fixed{
+  position: fixed;
+  padding: 4px 48px;
+  width: 100%;
+  bottom: 0;
+  background-color: $white-secondary;
+  border-top: 1px solid $gray-primary;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ap_region-sidebar{
+  .ap_footer-fixed{
+    padding: 16px 64px;
+    border-top: 1px solid $gray-lighter;
+    width: 25%; //width of sidebar
+  }
+}

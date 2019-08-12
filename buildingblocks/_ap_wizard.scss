@@ -1,0 +1,15 @@
+
+
+
+.ap_wizard {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.ap_wizardstep{
+  margin: 0 30px;
+  text-align: center;
+}
+
+// styling of active classes moved to __icn in proj specific to make SVG icons work with active classes

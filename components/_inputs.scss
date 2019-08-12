@@ -1,0 +1,87 @@
+.form-control, .form-disabled p{
+
+}
+
+input[type="checkbox"] {
+
+}
+
+
+
+/* ==========================================================================
+   Inputs
+
+   The form-control class style all inputs
+========================================================================== */
+
+.form-control {
+
+
+}
+
+.form-control:focus {
+
+}
+
+textarea.form-control {
+
+}
+
+
+select.form-control {
+
+}
+
+// Lined
+.form-control-lined {
+
+    &:focus {
+
+    }
+}
+
+// Read only fom control class
+.form-control-static {
+
+}
+
+// Not editable textarea, textarea will be rendered as a label
+.mx-textarea label {
+
+}
+
+// File input widget
+.mx-fileinput {
+    .mx-wrapped-label {
+
+    }
+    /* File input widget hover fix */
+    .mx-wrapped-form {
+        .mx-wrapped-input {
+
+        }
+        .mx-fileinput-upload-button:hover {
+
+        }
+    }
+}
+
+// Form Group
+.form-group {
+
+    & > [class*="col-"] {
+
+    }
+    // Alignment content
+    div[class*="textBox"] > label,
+    div[class*="textArea"] > label,
+    div[class*="datePicker"] > label {
+
+    }
+    // Label
+    .control-label {
+      font-size: inherit;
+      color: $text-secondary;
+
+    }
+}

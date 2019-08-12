@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Groupbox
+
+   Default Mendix Groupboxes
+========================================================================== */
+@import "../../lib/variables";
+
+.mx-groupbox {
+    border-bottom: 1px solid $border-color-default;
+
+    > .mx-groupbox-header {
+        padding: 15px 0;
+        //color: $gray-darker;
+        border-style: none;
+        background: transparent;
+        font-size: 16px;
+        font-weight: $fontweight-semibold;
+        border-radius: 0;
+        transition: all 0.2s ease;
+        &:hover{
+            //background-color: rgba(0,0,0,0.03);
+            color: $link-color;
+        }
+    }
+    .mx-groupbox-body {
+        padding: 15px 0;
+        border-style: none;
+        background-color: transparent;
+    }
+    .mx-groupbox-collapse-icon {
+        //color: $brand-primary;
+    }
+}
+
+// open close animation
+.mx-groupbox{
+   > .mx-groupbox-body {
+      transition: all .3s ease;
+      overflow: hidden;
+      padding: 0 0 15px;
+      height: auto;
+  }
+  &.collapsed > .mx-groupbox-body {
+      display: block;
+      height: 0;
+      padding: 0 0 0px;
+  }
+}
+.mx-groupbox-collapse-icon.glyphicon-plus::before {
+  content: "\e114";
+  //font-family: 'icomoon';
+}
+.mx-groupbox-collapse-icon.glyphicon-minus::before {
+  content: "\e113";
+  //font-family: 'font-awesome';
+}
+
+
+
+
+.mx-groupbox.groupbox-default,
+.mx-groupbox.groupbox-primary,
+.mx-groupbox.groupbox-inverse,
+.mx-groupbox.groupbox-success,
+.mx-groupbox.groupbox-info,
+.mx-groupbox.groupbox-warning,
+.mx-groupbox.groupbox-danger{
+    > .mx-groupbox-header {
+        margin: 0;
+        //color: $groupbox-default-color;
+        //border-width: 1px 1px 0 1px;
+        //border-style: solid;
+        //border-color: $groupbox-default-bg;
+        //background: $groupbox-default-bg;
+        //background-color: $brand-primary;
+        //color: $white;
+        //font-size: $font-size-h5;
+        .mx-groupbox-collapse-icon {
+            //margin-top: 0.1em;
+        }
+    }
+    > .mx-groupbox-body {
+        //padding: 10px 15px;
+        //border-width: 1px;
+        //border-style: solid;
+        //border-color: $groupbox-default-bg;
+        //background-color: #FFFFFF;
+    }
+    .mx-groupbox-header + .mx-groupbox-body {
+        //border-top: none;
+    }
+    &.collapsed > .mx-groupbox-header {
+    }
+  }

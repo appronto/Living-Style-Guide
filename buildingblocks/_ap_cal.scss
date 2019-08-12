@@ -1,0 +1,80 @@
+
+.ap_cal{
+    > .mx-dataview-content{
+      .ap_cal-month{
+
+      }
+      .ap_cal-content{
+        .title{
+
+        }
+        .text-primary{
+
+        }
+        .text-success{
+
+        }
+        .text-inactive{
+
+        }
+
+      }
+
+    }
+}
+
+
+.ap_cal{
+    > .mx-dataview-content{
+      > .ap_cal-month{
+        text-align: center;
+      }
+      > .ap_cal-content{
+        > .mx-grid-content{
+          > .mx-templategrid-content-wrapper{
+            .mx-templategrid-row{
+              .mx-templategrid-item{
+                padding: 0;
+                text-align: center;
+                border: none;
+                // width: 60px; gets overwritten inline due to gemplate grid
+
+
+
+
+                label{
+                  font-size: 12px;
+                  font-weight: $fontweight-semibold;
+                  border-radius: 10px;
+                  padding: 15px 0;
+
+
+                }
+                .title label{
+                  font-size: 12px;
+                  color: $text-secondary;
+                  font-weight: $fontweight-regular;
+                }
+                .ap_cal-content-unavailable{
+                  color: $text-inactive;
+                }
+                .ap_cal-content-available *{
+                  cursor: pointer;
+                  &:hover label{
+                    color: $brand-info;
+                  }
+                }
+                .ap_cal-content-availableselected{
+                  background-color: $brand-info;
+                  color: $white;
+                  border-radius: 4px;
+                }
+
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }

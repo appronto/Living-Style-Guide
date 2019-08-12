@@ -1,0 +1,59 @@
+
+.mx-layoutcontainer-wrapper.mx-scrollcontainer-wrapper{
+  // height generated dynamically
+  .mx-layoutcontainer.mx-scrollcontainer.mx-layoutcontainer-horizontal.mx-scrollcontainer-horizontal.mx-layoutcontainer-fixed.mx-scrollcontainer-fixed{
+    //only .mx-scrollcontainer-horizontal gets styling from this whole mess of classes
+  }
+}
+
+.mx-scrollcontainer-horizontal{
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.mx-scrollcontainer-horizontal > div {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.mx-layoutcontainer-wrapper.mx-scrollcontainer-wrapper{
+    // height generated dynamically
+    //overflow: auto; //hiden because it breaks dropdownmenu in topbar by BKD
+}
+
+.mx-scrollcontainer .mx-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+
+// ------ ^^^ is part of MXUI, so cant change it, its just so you know what already happens when you give a scrollcontinaer scrollindependtaly
+
+
+// look at ap_layout-flex
+
+.card.ap_scrollcontainer{
+  margin: 0;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  padding-bottom: 0;
+
+  .row > [class*="col-"] {
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+}
+
+.ap_scrollcontainer{
+  min-height: 500px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+
+  img{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+}

@@ -1,0 +1,31 @@
+.mx-dataview-content .mandatory {
+	border: 4px solid red;
+	}
+.mx-dataview-content .copythrough {
+    border: 4px dotted green;
+}
+
+/* ==========================================================================
+   Dataview
+
+   Default Mendix Dataview Widget. The data view is used for showing the contents of exactly one object
+========================================================================== */
+.mx-dataview {
+	/* Styles here */
+	// Control bar
+	.mx-dataview-controls {
+		/* Styles here */
+		// Buttons
+		.mx-button {
+		}
+	}
+}
+
+
+.form-horizontal.mx-dataview{
+
+}
+
+.form-vertical.mx-dataview{
+
+}

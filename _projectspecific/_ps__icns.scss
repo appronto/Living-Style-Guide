@@ -1,0 +1,139 @@
+
+
+// here all your custom styling
+
+.ap_icn{
+  background: url(../../sass/custom/_projectspecific/img/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+
+.wizard-step{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  .ap_icn+ button.btn{
+    display: none;
+  }
+}
+
+
+.wizard-step{
+  .ap_icn{
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.wizard-step-visited .mx-link{
+  color: $brand-primary;
+}
+
+
+//-------------------- file names here
+
+
+$files: alert-diamond,
+        alert-diamond;
+
+@each $i in $files {
+    .ap_icn-#{$i} {
+      background-image: url(../../../../img/icns/disabled/#{$i}.svg);
+    }
+
+    .ap_icn-success.ap_icn-#{$i} {
+      background-image: url(../../../../img/icns/success/#{$i}.svg);
+    }
+
+    .ap_icn-warning.ap_icn-#{$i} {
+      background-image: url(../../../../img/icns/warning/#{$i}.svg);
+    }
+
+    .ap_icn-danger.ap_icn-#{$i} {
+      background-image: url(../../../../img/icns/danger/#{$i}.svg);
+    }
+
+    .wizard-step-active, .wizard-step-visited{
+          .ap_icn-#{$i} {
+          background-image: url(../../../../img/icns/warning/#{$i}.svg);
+      }
+    }
+}
+
+
+
+
+
+
+
+// Wizard
+
+.ap_wizard {
+
+}
+
+
+
+ 
+.ap_wizardstep{
+  font-weight: $fontweight-semibold;
+  color: $text-primary;
+  &::before{
+    content: '';
+    background-color: $text-inactive;
+    width: 50px;
+    height: 1px;
+    position: absolute;
+    top: 26px;
+    margin-left: 31px;
+  }
+  &:last-child{
+    &::before{
+      display: none;
+    }
+  }
+  .ap_wizardstep-icnwrap{
+    border-radius: 50%;
+    padding: 12px;
+    border: 2px solid $text-inactive;
+    margin-bottom: 4px;
+  }
+  .ap_icn{
+    height: 24px;
+    width: 24px;
+  }
+}
+
+
+$amountOfLinks: 20;
+@for $i from 1 through $amountOfLinks {
+  //Viewed
+  .ap_wizard.active#{$i} .ap_wizardstep:nth-child(-n+#{$i}){
+    color: $text-primary;
+    @each $i in $files {
+        .ap_icn-#{$i} {
+          background-image: url(../../../../img/icns/warning/#{$i}.svg);
+        }
+        .ap_wizardstep-icnwrap{
+          border: 2px solid $brand-success;
+        }
+    }
+
+  }
+  //Active
+  .ap_wizard.active#{$i} .ap_wizardstep:nth-child(#{$i}){
+    color: $brand-primary;
+    @each $i in $files {
+        .ap_icn-#{$i} {
+          background-image: url(../../../../img/icns/warning/#{$i}.svg);
+        }
+        .ap_wizardstep-icnwrap{
+          border: 2px solid $brand-primary;
+        }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+
+.lsg_menu{
+  padding-bottom: 60px;
+  h3{
+    font-size: 16px;
+    font-weight: $fontweight-semibold;
+
+    margin-top: 40px;
+    border-bottom: 1px solid $border-color-default;
+    margin-bottom: 0;
+    padding: 8px;
+  }
+  .mx-link{
+    padding: 6px 8px;
+    display: block;
+    color: $text-secondary;
+  }
+
+  div + div h3{
+    border-top: 1px solid $border-color-default;
+  }
+  .btn + .btn, .mx-link + .mx-link {
+    margin-left: 0px;
+  }
+}
+
+.lsg_note{
+    background-color: $white-secondary;
+    font-style: monospace;
+    max-width: 500px;
+    padding: 15px;
+    margin: 15px 15px 0;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-family: monospace;
+}

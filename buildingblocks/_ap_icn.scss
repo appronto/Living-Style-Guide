@@ -1,0 +1,108 @@
+@mixin maskimage($url) {
+  -webkit-mask-image: $url;
+          mask-image: $url;
+}
+
+
+
+//fix this at some point
+  @mixin icnurl($icnurl) {
+    //-webkit-mask-image: "url(../../icn/svg/"+$icnurl+".svg";
+            //mask-image: 'url(../../icn/svg/'+$icnurl+'.svg';
+  }
+  .ap_icn-phone-call{
+    //@include icnurl('39-smileys/smiley-frown-1.svg');
+  }
+
+
+
+
+
+
+
+
+.ap_icn{
+  //background-repeat: no-repeat;
+  //background-position: center;
+  background-color: $text-primary;
+  width: 32px;
+  height: 32px;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.ap_icn-temp{
+  -webkit-mask-image: url(../../../img/icn/tmp.svg);
+  mask-image: url(../../../img/icn/tmp.svg);
+}
+
+.ap_icn-users{
+  -webkit-mask-image: url(../../../img/icn/svg/08-users-actions/person-2.svg);
+  mask-image: url(../../../img/icn/svg/08-users-actions/person-2.svg);
+}
+
+.ap_icn-checklist{
+  -webkit-mask-image: url(../../../img/icn/svg/18-content/new-notepad-checklist.svg);
+  mask-image: url(../../../img/icn/svg/18-content/new-notepad-checklist.svg);
+}
+
+.ap_icn-smiley-happy{
+  //@include maskimage( url(../../icn/svg/39-smileys/smiley-smile-4.svg) );
+  @include maskimage( url(../../../img/smiley-smile-1.svg) );
+}
+
+.ap_icn-smiley-sad{
+  //@include maskimage( url(../../icn/svg/39-smileys/smiley-frown-1.svg) );
+  @include maskimage( url(../../../img/smiley-frown-2.svg) );
+}
+
+
+.ap_icn-phone-call{
+  //@include maskimage( url(../../icn/svg/12-phone/phone-call-2.svg) );
+  @include maskimage( url(../../../img/phone-call-2.svg) );
+}
+
+//--------------------------------------------- Complete Set from here
+
+.ap_icn-custom-exam{
+  @include maskimage( url(../../../../img/icn-custom/exam.svg) );
+}
+
+.ap_icn-status-close{
+  @include maskimage( url(../../../../img/icn/svg/02-status/close.svg) );
+}
+
+.ap_icn-vidmeeting-headphone{
+  @include maskimage( url(../../../../img/icn/svg/15-video-meeting/headphone.svg) );
+}
+
+.ap_icn-shopping-basket{
+  @include maskimage( url(../../../../img/icn/svg/41-shopping/basket-2.svg) );
+}
+
+
+
+
+
+
+
+.ap_icn-sm{
+  width: 16px;
+  height: 16px;
+}
+
+.ap_icn-container{
+  width: 32px;
+  height: 32px;
+  background-color: $brand-info;
+}
+
+.ap_icn-lg{
+  width: 64px;
+  height: 64px;
+}
+
+.ap_icn-white{
+  background-color: $white;
+}

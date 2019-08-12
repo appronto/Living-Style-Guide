@@ -1,0 +1,187 @@
+//------------ table
+
+
+.form-horizontal .control-label{
+  padding-top: 0px;
+  padding-bottom: 0px;
+//line-height: 1.42857;
+}
+
+.form-horizontal .form-group{
+  display: flex;
+  align-items: center;
+}
+.form-horizontal .checkbox, .form-horizontal .checkbox-inline, .form-horizontal .radio, .form-horizontal .radio-inline {
+    padding-top: 0px;
+  }
+
+//-------------- table refactoring
+
+.ap_table *{
+  margin: 0;
+  padding: 0;
+}
+
+.ap_qatable{
+  .form-group, .ap_qaitem{
+    margin-bottom: 15px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+
+    label, .control-label, .q{
+      width: 50%;
+      display: inline-block;
+      font-weight: 600;
+      //padding-top: 0;
+      //padding-bottom: 0;
+      //line-height: 19px;
+    }
+    .form-control-static, .a{
+      //width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0;
+      padding-top: 0;
+    }
+    .a{width: 50%;} //fix for create jira ticket
+
+    .mx-listview-empty{
+      display: none;
+    }
+  }
+  .mx-dataview-content{
+    width: 100%;
+  }
+}
+
+.ap_qatable{
+  .ap_qaitem{
+    &:hover{
+      background-color: rgba(255,255,255,1);
+      color: $text-secondary;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+
+
+.ap_listview-formgroup.form-horizontal{
+  .form-group{
+    margin-bottom: 0px;
+  }
+  .q{
+    //background-color: red;
+    display: inline-block;
+    width: 25%;
+    font-weight: $fontweight-semibold;
+  }
+  .a{
+    //background-color: green;
+    display: inline-block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card{
+  .ap_qatable{
+    .ap_qaitem{
+      &:hover{
+        background-color: rgba(0,0,0,0.03);
+        color: $text-secondary;
+
+      }
+    }
+  }
+}
+
+.ap_qalist + .ap_qatable, .ap_qatable + .ap_qalist {
+  margin-bottom: 32px;
+}
+
+
+/* ------ list ----- */
+
+.ap_qalist{
+  .ap_qaitem{
+    //padding: 0px 0 40px;
+    //transition: all 0.3s ease-in-out;
+    .q, .a{
+      width: 100%;
+      display: block;
+      vertical-align: top;
+    }
+    .q ,.q label{
+      font-weight: 600;
+    }
+    .mx-listview-empty{
+    //  display: none;
+    }
+  }
+}
+
+
+/* ------ Just normal with 1 wrap ----- */
+
+.ap_qalist *{
+  margin: 0;
+  padding: 0;
+}
+
+.ap_qalist{
+  .form-group, .ap_qaitem{
+    margin-bottom: 15px;
+    //background-color: red;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+
+    label, .control-label{
+    }
+    .form-control-static{
+      padding-top: 0px;
+      padding-left: 0px;
+    }
+  }
+}
+
+
+.ap_qalist.p-xs{
+  .form-group{
+    margin-bottom: 2px;
+
+    .form-control-static, label{
+      padding-bottom: 0;
+      padding-top: 0px;
+    }
+  }
+
+}
+
+
+// dropdowns
+.ap_qalist{
+  .form-control{
+    margin-bottom: 20px;
+  }
+}
+
+// fixxes
+
+.ap_qalist, .ap_qatable{
+  .mx-referenceselector .form-control{
+    padding: 8px 10px;
+  }
+}
