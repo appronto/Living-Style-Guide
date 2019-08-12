@@ -44,31 +44,35 @@ h2{
     height: 400px;
     display: flex;
     flex-direction: column;
-    // background: red;
 }
+
 /////////////////////////////////////////////////////////////////
 // Start of Sticky header css
 /////////////////////////////////////////////////////////////////
+
+// class to disable overflow on layout element.
+// .ap_layout-flex-fix-height {
+//   display: flex;
+//   height: 100%;
+//   flex-direction: column;
+//   overflow: hidden;
+// }
+// class to fix dyniamic height
 .ap_layout-flex-fix > div {
   flex-direction: column;
   display: flex;
-  overflow: hidden;
-}
-.ap_layout-flex-fix-height {
-  display: flex;
   height: 100%;
-  flex-direction: column;
   overflow: hidden;
 }
+
 .ap_table-sticky-containter {
+  display: flex;
+  flex-direction: column;
   .ap_table-sticky-wrapper {
     position: relative;
     overflow: auto;
     display: flex;
     flex-direction: column;
-
-    // edit this part to make the list height fit the layout
-    // height: calc(70vh);
     height: 100%;
 
     // header height
@@ -84,12 +88,9 @@ h2{
         vertical-align: middle;
         span {
           color: $gray-light;
+          font-style: italic;
         }
       }
-    }
-    // content box scrolling enabled
-    > div {
-      // height: calc(100hv - 65px);
     }
   }
 }
