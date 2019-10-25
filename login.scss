@@ -7,8 +7,6 @@
 .page-wrap{
   display: flex;
   height: 100vh;
-  max-height: 100vh;
-  overflow-y: hidden;
   width: 100%;
   background-color: $link-color;
   flex-direction: row-reverse; // makes bar left or right
@@ -38,7 +36,7 @@
     }
 
 
-    background: url(../../web/sass/app/_projectspecific/img/bg-login.jpg);
+    background: url(../../sass/custom/_projectspecific/img/bg-login.jpg);
     background-size: cover;
 
     .quote-bg{
@@ -70,8 +68,6 @@
 
     padding: 25px 70px 5px;
     width: 100%;
-    max-height: 100vh;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,7 +82,7 @@
     .login-logo{
       width: 64px;
       height: 64px;
-      background: url(../../web/sass/app/_projectspecific/img/logo.svg);
+      background: url(../../sass/custom/_projectspecific/img/logo.svg);
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: center;
@@ -122,7 +118,7 @@
         margin-left: 12px;
         width: 24px;
         height: 24px;
-        background: url(../../web/sass/app/_projectspecific/img/account-circle-1.svg);
+        background: url(../../sass/custom/_projectspecific/img/account-circle-1.svg);
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
@@ -130,7 +126,7 @@
       }
 
       .password-icn{
-        background: url(../../web/sass/app/_projectspecific/img/lock-close-1.svg);
+        background: url(../../sass/custom/_projectspecific/img/lock-close-1.svg);
       }
 
 
@@ -170,10 +166,4 @@
       }
     }
   }
-}
-
-.page-wrap .login-bar .login-form .mx-textbox .form-control{
-  flex: auto;
-  display: block;
-  padding: 0 10px;
 }

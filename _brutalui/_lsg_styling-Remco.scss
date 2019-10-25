@@ -14,6 +14,7 @@
   .ap_header {
     border-bottom: 1px solid $border-color-default;
     padding-bottom: 120px;
+
     .title{
         padding-top: 120px;
     }
@@ -21,7 +22,18 @@
       margin-top: 20px;
     }
   }
+  .ap_mobilesidenav{
+    .ap_header{
+      padding: 0;
+      button{
+        margin-top: 0;
+      }
+
+    }
+  }
 }
+
+
 
 h2{
   font-weight: 800;
@@ -61,6 +73,7 @@ h2{
 .ap_table-sticky-containter {
   display: flex;
   flex-direction: column;
+  height: 100%;
   .ap_table-sticky-wrapper {
     position: relative;
     overflow: auto;
@@ -91,32 +104,33 @@ h2{
 // End of sticky header css
 /////////////////////////////////////////////////////////////////
 
-.brand-logo {
-  // background: url(../../sass/custom/_projectspecific/img/JR-icon.svg) !important;
-}
-
-.ap_full-action-card {
-  width: 300px;
-  height: 200px;
-  padding: 0;
-  position: relative;
-  background-color: green;
-  align-items: flex-start;
-  vertical-align: top;
-  align-content: flex-start;
-}
-
-.ap_card-action {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  // background: red;
-  position: absolute;
-}
 
 // spans have no display setting so they do not count for margins and paddings. General fix ->
 span {
   display: inline-block;
+}
+
+/////////////////////////////////////////////////////////////////
+// Auto font styling
+/////////////////////////////////////////////////////////////////
+
+// auto top margin for texts below
+.mx-layoutgrid .col-md-4  {
+  h3.mx-text:first-child {
+    margin-top: 0;
+  }
+  span.mx-text {
+    padding-top: 16px;
+    text-align: justify;
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+// Restyling basic Mendex elements
+/////////////////////////////////////////////////////////////////
+
+.form-group {
+  input[type=checkbox] {
+    margin-right: 16px;
+  }
 }

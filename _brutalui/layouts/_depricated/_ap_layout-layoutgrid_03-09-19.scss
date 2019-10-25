@@ -1,0 +1,267 @@
+@import "../_projectspecific/mx-default-variables";
+
+.ap_flexlayoutgrid{
+    //padding-top: $topbar-minimalheight;
+}
+
+@media (min-width: $screen-sm) {
+  .ap_flexlayoutgrid-pagewrap{
+    display: flex;
+    > div.mx-placeholder{
+      display: flex;
+      width: 100%;
+      > div.mx-placeholder{
+        //background-color: green;
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        flex: 1;
+        overflow-y: hidden;
+        > div.mx-placeholder{
+          //background-color: green;
+          //position: absolute;
+          width: 100%;
+          min-height: 100%;
+          max-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          flex: 1;
+          overflow-y: hidden;}
+
+        .ap_layout-flex_topbar {
+            min-height: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        div.mx-layoutgrid.ap_flexlayoutgrid{
+          //background-color: yellow;
+          padding-top: 0px;
+          width: 100%;
+          display: flex;
+          min-height: 100%;
+          max-height: 100%;
+          height: 100%;
+          position: relative;
+          flex: 1;
+          > .row{
+            //background-color: orange;
+            display: flex;
+            width: 100%;
+            flex: 1;
+            width: 100%;
+            > div{
+              overflow-y: auto;
+              max-height: 100%;
+            }
+            > div:nth-child(1){
+              //background-color: red;
+            }
+            > div:nth-child(2){
+              //background-color: purple;
+              //background-color: $bg-color;
+            }
+            > div:nth-child(3){
+              //background-color: blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+// Col padding
+div.mx-page.ap_flexlayoutgrid-pagewrap > div.mx-placeholder > div.mx-placeholder
+> div.mx-layoutgrid.ap_flexlayoutgrid{ // yellow
+  > .row{
+    > div:first-of-type{
+      @media (min-width: $screen-md) {
+          padding: 0px 15px 0px 15px;
+      }
+    }
+    > div:last-of-type{
+
+      @media (min-width: $screen-md) {
+          padding: 0px 15px 0px 15px;
+      }
+    }
+  }
+}
+
+
+// Troubleshooting colors
+
+div.mx-layoutgrid.ap_flexlayoutgrid{ // yellow
+  > .row{
+    > div:nth-child(1){
+      //background-color: red;
+    }
+    > div:nth-child(2){
+      //background-color: purple;
+    }
+    > div:nth-child(3){
+      //background-color: blue;
+    }
+  }
+}
+
+
+
+
+
+//mobile sidebar
+
+.ap_mobilesidenav{
+  overflow: hidden;
+  overflow-y: auto;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+  z-index: 200;
+  transition: width 0.5s ease;
+  position: fixed;
+  background-color: $navigation-bg;
+  height: 100vh;
+  width: $flex-sidebar-width;
+  left: -$flex-sidebar-width + -100px;
+  transition: all 0.5s ease;
+  &.ap_open{
+    width: $flex-sidebar-width;
+    left: 0;
+  }
+
+  .ap_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    > div {
+      width: 33%;
+    }
+    .ap_header-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .ap_header-right{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  .ap_user{
+    background-color: rgba(0,0,0,0.07);
+    padding: 15px;
+  }
+
+  @media (min-width: $screen-md) {
+      display: none;
+  }
+}
+
+
+
+
+
+
+
+
+// Topnav
+.ap_topnav{
+  min-height: $topbar-minimalheight;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background-color: $navigation-bg-mobile;
+  @media(min-width:767px){
+    background-color: $navigation-bg;
+    position: relative;
+    //background-color: red;
+  }
+
+  & + div{ //fixes spacing due to mobile sticky header
+    padding-top: $topbar-minimalheight;
+    @media(min-width:767px){
+      padding-top: 0;
+    }
+  }
+
+  .ap_user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ap_user-avatar{
+      height: 40px;
+      width: 40px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+    .ap_user-name{
+      padding: 0 5px;
+    }
+  }
+
+
+  //makes items align with bootstrap grid
+  & > div{
+    @media(min-width:767px){
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  &-left,
+  &-center,
+  &-right{
+    display: flex;
+    align-items: center;
+  }
+  &-left    {justify-content: flex-start; }
+  &-center  {justify-content: center;     }
+  &-right   {justify-content: flex-end;   }
+  &-right > *{
+    padding-left: 10px;
+    padding-right: 10px;
+    &:last-child{
+      padding-right: 0px;
+    }
+  }
+
+  &.ap_shadow{
+    box-shadow: 0 10px 30px -6px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-out;
+    @media(min-width:767px){
+      box-shadow: none;
+    }
+  }
+
+  .mx-navbar ul.nav > li.mx-navbar-item > a {
+    min-height: $topbar-minimalheight;
+  }
+  a, .mx-link, .mx-link a{
+    color: $navigation-color;
+  }
+
+  .ap_togglemenu{
+    @media(min-width:767px){
+      display: none;
+    }
+  }
+}

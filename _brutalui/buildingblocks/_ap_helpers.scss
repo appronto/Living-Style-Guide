@@ -1,3 +1,17 @@
+$alert-info-color: red;
+$alert-info-border-color: red;
+$alert-info-bg: red;
+$alert-success-color: red;
+$alert-success-border-color: red;
+$alert-success-bg: red;
+$alert-warning-color: red;
+$alert-warning-border-color: red;
+$alert-warning-bg: red;
+$alert-danger-color: red;
+$alert-danger-border-color: red;
+$alert-danger-border-color: red;
+$alert-danger-bg: red;
+
 $sizes: -none     0,
         -xs       4px,
         -sm       8px,
@@ -391,3 +405,7 @@ $sizes: -none     0,
     clear: both;
 }
 */
+
+.sprintrFeedback__notification__container{
+  pointer-events: none;
+}
